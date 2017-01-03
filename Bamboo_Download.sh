@@ -9,8 +9,8 @@ chkconfig -list httpd
 sudo service mysqld start
 sudo mysql_secure_installation
 mysql -u root -p
-CREATE DATABASE bamboo CHARACTER SET utf8 COLLATE utf8_bin;
-GRANT ALL PRIVILEGES ON bamboo.* TO 'bamboouser'@'localhost' IDENTIFIED BY 'bamboopassword';
+CREATE DATABASE bamboo CHARACTER SET utf8 COLLATE utf8_bin
+GRANT ALL PRIVILEGES ON bamboo.* TO 'bamboouser'@'localhost' IDENTIFIED BY 'bamboopassword'
 FLUSH PRIVILEGES;
 wget http://www.atlassian.com/software/bamboo/downloads/binary/atlassian-bamboo-5.3.tar.gz
 tar -zxvf atlassian-bamboo-5.3.tar.gz
